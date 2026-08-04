@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1>Sobre Mim</h1>
+    <li>
+        <p>Meu nome é {{ aluno['nome'] }} e sou estudante da turma {{ aluno['turma'] }}.</p>
+        <p>Tenho interesse em programação e desenvolvimento web.</p>
+        <p>Gosto de aprender novas tecnologias e estou sempre buscando melhorar minhas habilidades.</p>
+    </li>
+
+    <img src="/foto/gabriel.jpg" alt="Foto">
+{% endblock %}
