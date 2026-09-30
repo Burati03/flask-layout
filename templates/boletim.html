@@ -1,5 +1,36 @@
 {% extends "layout.html" %}
 
 {% block main %}
-    <h1>Boletim</h1>
+
+<h1>Boletim</h1>
+
+<p>
+    Usuário conectado: <strong>{{ usuario }}</strong>
+</p>
+
+<table border="1">
+
+    <tr>
+        <th>Matéria</th>
+        <th>Nota</th>
+    </tr>
+
+    {% for nota in notas %}
+
+    <tr>
+
+        <td>
+            {{ nota["materia"] }}
+        </td>
+
+        <td>
+            {{ nota["nota"] }}
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
 {% endblock %}

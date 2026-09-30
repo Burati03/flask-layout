@@ -1,6 +1,33 @@
 {% extends "layout.html" %}
 
 {% block main %}
-    <h1>Olá, {{ aluno['nome'] }}</h1>
-    <h2>Turma: {{ aluno['turma'] }}</h2>
+
+<h1>Home</h1>
+
+<p>
+    Bem-vindo ao meu site pessoal.
+</p>
+
+{% if aluno %}
+
+<p>
+    Olá, {{ aluno["nome"] }}!
+</p>
+
+{% endif %}
+
+{% if session.get("usuario_id") %}
+
+<p>
+    Você está conectado.
+</p>
+
+{% else %}
+
+<p>
+    Faça login para acessar suas páginas privadas.
+</p>
+
+{% endif %}
+
 {% endblock %}

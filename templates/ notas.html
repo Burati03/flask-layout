@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h1>Minhas Notas</h1>
+
+<p>
+    Estas informações foram carregadas do banco SQLite.
+</p>
+
+{% for nota in notas %}
+
+    <div>
+
+        <h3>{{ nota["materia"] }}</h3>
+
+        <p>
+            Nota: {{ nota["nota"] }}
+        </p>
+
+    </div>
+
+{% endfor %}
+
+{% endblock %}
